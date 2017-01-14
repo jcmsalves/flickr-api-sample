@@ -1,7 +1,9 @@
-package com.jcmsalves.flickrapi;
+package com.jcmsalves.flickrapi.ui;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
+import com.jcmsalves.flickrapi.R;
 
 public class GalleryActivity extends AppCompatActivity {
 
