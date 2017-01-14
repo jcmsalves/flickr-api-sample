@@ -73,7 +73,7 @@ public class Photo {
         return tags;
     }
 
-    private class Media {
+    public class Media {
 
         @SerializedName("m")
         @Expose

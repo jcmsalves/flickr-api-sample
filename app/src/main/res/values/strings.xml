@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Flickr Api Sample</string>
+
+    <!--Default-->
+    <string name="default_error">Error</string>
+    <string name="default_ok">Ok</string>
+    <string name="default_connection_error">Please verify you connection and try again.</string>
+    <string name="default_generic_error">There was an error getting the content. Please try again</string>
+
+    <!--Gallery Screen-->
+    <string name="gallery_screen_title">Flickr Public Feed</string>
+    <string name="gallery_empty_message">There are no photos to show at this moment</string>
 </resources>

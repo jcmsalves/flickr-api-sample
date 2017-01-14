@@ -1,5 +1,6 @@
 package com.jcmsalves.flickrapi.data.backend;
 
+import com.jcmsalves.flickrapi.data.model.Feed;
 import com.jcmsalves.flickrapi.data.model.Photo;
 
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ import rx.Observable;
 
 public interface BackendService {
 
-    @GET("/feeds/photos_public.gne")
-    Observable<ArrayList<Photo>> getPublicPictures(@Query("tags") String tags);
+    @GET("feeds/photos_public.gne")
+    Observable<Feed> getPublicPictures(@Query("tags") String tags);
 
 }

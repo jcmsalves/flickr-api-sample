@@ -1,6 +1,7 @@
 package com.jcmsalves.flickrapi.data.repositories;
 
 import com.jcmsalves.flickrapi.data.backend.BackendService;
+import com.jcmsalves.flickrapi.data.model.Feed;
 import com.jcmsalves.flickrapi.data.model.Photo;
 
 import java.util.ArrayList;
@@ -20,10 +21,10 @@ public class FeedRepository {
         this.backendService = backendService;
     }
 
-    public Observable<ArrayList<Photo>> getPublicPictures(final String tags) {
-        return Observable.defer(new Func0<Observable<ArrayList<Photo>>>() {
+    public Observable<Feed> getPublicPictures(final String tags) {
+        return Observable.defer(new Func0<Observable<Feed>>() {
             @Override
-            public Observable<ArrayList<Photo>> call() {
+            public Observable<Feed> call() {
                 return backendService.getPublicPictures(tags);
             }
         });

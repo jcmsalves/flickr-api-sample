@@ -1,12 +1,13 @@
 package com.jcmsalves.flickrapi.data.backend;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.jcmsalves.flickrapi.BuildConfig;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Created by joaoalves on 14/01/2017.
@@ -14,13 +15,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class BackendServiceFactory {
 
-    private final static String BASE_URL = "https://api.flickr.com/services";
+    private final static String BASE_URL = "https://api.flickr.com/services/";
 
     public static BackendService makeBackendService() {
         OkHttpClient client = makeOkHttpClient();
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(JsonCleanerConverter.create(new GsonBuilder().create()))
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .client(client)
                 .build();
