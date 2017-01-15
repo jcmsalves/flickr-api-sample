@@ -86,7 +86,7 @@ public class JsonCleanerConverter extends Converter.Factory {
         public T convert(ResponseBody value) throws IOException {
             String dirty = value.string();
             String clean = dirty.replace("jsonFlickrFeed(","");
-            clean = clean.replace(")","");
+            clean = clean.replace("})","}");
             try {
                 return adapter.fromJson(clean);
             } finally {
@@ -94,6 +94,5 @@ public class JsonCleanerConverter extends Converter.Factory {
             }
         }
     }
-
 
 }

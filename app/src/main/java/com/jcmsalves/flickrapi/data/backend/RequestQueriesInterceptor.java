@@ -11,7 +11,7 @@ import okhttp3.Response;
  * Created by joaoalves on 14/01/2017.
  */
 
-public class JsonFormatInterceptor implements Interceptor {
+public class RequestQueriesInterceptor implements Interceptor {
 
     @Override
     public Response intercept(Chain chain) throws IOException {

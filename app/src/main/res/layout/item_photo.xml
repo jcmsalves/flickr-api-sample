@@ -2,25 +2,131 @@
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-
-    <!--todo - add more icon to flip card-->
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:animateLayoutChanges="true">
 
     <!--Card front-->
 
     <ImageView
         android:id="@+id/photo_iv"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
         android:layout_weight="1"
         android:scaleType="centerCrop"
-        android:src="@drawable/placeholder"/>
-
+        android:src="@drawable/placeholder" />
 
     <!--Card back-->
 
-    <!--todo - add card back layout with metadata-->
+    <FrameLayout
+        android:id="@+id/card_back_fl"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:background="@color/activityBackground"
+        android:visibility="gone">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/darkGrey"
+                    android:text="Title:" />
+
+                <TextView
+                    android:id="@+id/photo_title_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:textSize="11sp"
+                    android:textColor="@color/lightGrey"
+                    android:text="@string/gallery_photo_title" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/darkGrey"
+                    android:text="Author:" />
+
+                <TextView
+                    android:id="@+id/photo_author_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:textSize="11sp"
+                    android:textColor="@color/lightGrey"
+                    android:text="@string/gallery_photo_author" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/darkGrey"
+                    android:text="@string/gallery_photo_tags" />
+
+                <TextView
+                    android:id="@+id/photo_tags_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    android:textSize="11sp"
+                    android:textColor="@color/lightGrey"
+                    android:text="tags" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/flip_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/flip"
+        android:layout_gravity="top|right"
+        android:padding="8dp"
+        android:visibility="gone"/>
 
 </FrameLayout>

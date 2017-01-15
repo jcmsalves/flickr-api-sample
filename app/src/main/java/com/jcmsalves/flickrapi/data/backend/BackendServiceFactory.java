@@ -1,6 +1,5 @@
 package com.jcmsalves.flickrapi.data.backend;
 
-import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.jcmsalves.flickrapi.BuildConfig;
 
@@ -37,7 +36,7 @@ public class BackendServiceFactory {
         }
 
         OkHttpClient client = new OkHttpClient.Builder()
-                .addInterceptor(new JsonFormatInterceptor())
+                .addInterceptor(new RequestQueriesInterceptor())
                 .addInterceptor(httpLoggingInterceptor)
                 .build();
         return client;

@@ -2,9 +2,6 @@ package com.jcmsalves.flickrapi.data.repositories;
 
 import com.jcmsalves.flickrapi.data.backend.BackendService;
 import com.jcmsalves.flickrapi.data.model.Feed;
-import com.jcmsalves.flickrapi.data.model.Photo;
-
-import java.util.ArrayList;
 
 import rx.Observable;
 import rx.functions.Func0;

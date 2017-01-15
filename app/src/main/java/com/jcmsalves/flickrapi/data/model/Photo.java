@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName;
  * Created by joaoalves on 14/01/2017.
  */
 
-public class Photo {
+public class Photo extends GalleryItem {
 
     @SerializedName("title")
     @Expose

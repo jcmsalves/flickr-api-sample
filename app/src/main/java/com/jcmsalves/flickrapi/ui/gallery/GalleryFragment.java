@@ -63,7 +63,9 @@ public class GalleryFragment extends Fragment implements GalleryMvpView {
             }
         });
 
-        galleryRv.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(), 2);
+        gridLayoutManager.setItemPrefetchEnabled(false);
+        galleryRv.setLayoutManager(gridLayoutManager);
         galleryRv.setAdapter(galleryAdapter);
 
         galleryPresenter.getFeedData(null);

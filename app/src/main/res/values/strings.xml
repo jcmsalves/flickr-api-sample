@@ -10,4 +10,9 @@
     <!--Gallery Screen-->
     <string name="gallery_screen_title">Flickr Public Feed</string>
     <string name="gallery_empty_message">There are no photos to show at this moment</string>
+
+    <string name="gallery_photo_title">Title:</string>
+    <string name="gallery_photo_author">Author:</string>
+    <string name="gallery_photo_tags">Tags:</string>
+    <string name="gallery_photo_no_tags">none</string>
 </resources>
