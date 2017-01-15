@@ -45,6 +45,10 @@ public class Photo extends GalleryItem {
         return webUrl;
     }
 
+    public void setWebUrl(String webUrl) {
+        this.webUrl = webUrl;
+    }
+
     public Media getMedia() {
         return media;
     }

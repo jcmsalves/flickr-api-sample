@@ -47,6 +47,8 @@ public class GalleryPresenter extends MvpBasePresenter<GalleryMvpView> {
             return;
         }
 
+        getView().showProgress();
+
         addSubscription(feedRepository.getPublicPictures(tags)
                 .subscribeOn(ioScheduler)
                 .observeOn(mainScheduler)

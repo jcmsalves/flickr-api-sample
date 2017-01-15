@@ -19,7 +19,7 @@ public class Feed {
     private String generator;
     @SerializedName("items")
     @Expose
-    private ArrayList<Photo> photos = null;
+    private ArrayList<Photo> photos = new ArrayList<>();
 
     public String getModified() {
         return modified;
@@ -31,5 +31,9 @@ public class Feed {
 
     public ArrayList<Photo> getPhotos() {
         return photos;
+    }
+
+    public void setPhotos(ArrayList<Photo> photos) {
+        this.photos = photos;
     }
 }
