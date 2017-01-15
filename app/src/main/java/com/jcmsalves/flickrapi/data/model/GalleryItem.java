@@ -1,10 +1,12 @@
 package com.jcmsalves.flickrapi.data.model;
 
+import java.io.Serializable;
+
 /**
  * Created by joaoalves on 14/01/2017.
  */
 
-public class GalleryItem {
+public class GalleryItem implements Serializable {
 
     private boolean isFlipped = false;
 

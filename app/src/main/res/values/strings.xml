@@ -15,4 +15,14 @@
     <string name="gallery_photo_author">Author:</string>
     <string name="gallery_photo_tags">Tags:</string>
     <string name="gallery_photo_no_tags">none</string>
+
+    <string name="photo_detail_actions">Actions</string>
+    <string name="photo_detail_save">Save photo to device</string>
+    <string name="photo_detail_open">Open in browser</string>
+    <string name="photo_detail_share">Share by email</string>
+
+    <string name="photo_detail_title">Title:</string>
+    <string name="photo_detail_author">Author:</string>
+    <string name="photo_detail_tags">Tags:</string>
+    <string name="photo_detail_no_tags">none</string>
 </resources>

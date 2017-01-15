@@ -1,5 +1,6 @@
 package com.jcmsalves.flickrapi.ui.gallery;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -16,6 +17,8 @@ import com.jcmsalves.flickrapi.R;
 import com.jcmsalves.flickrapi.data.backend.BackendServiceFactory;
 import com.jcmsalves.flickrapi.data.model.Photo;
 import com.jcmsalves.flickrapi.data.repositories.FeedRepository;
+import com.jcmsalves.flickrapi.ui.photodetail.PhotoDetailActivity;
+import com.jcmsalves.flickrapi.utils.Constants;
 
 import java.util.ArrayList;
 
@@ -58,8 +61,11 @@ public class GalleryFragment extends Fragment implements GalleryMvpView {
 
         galleryAdapter = new GalleryAdapter(getActivity(), new GalleryAdapter.OnPhotoClickedListener() {
             @Override
-            public void onPhotoClicked(int position) {
-//                Intent intent = new Intent(getActivity(), PhotoDetailActivity.class);
+            public void onPhotoClicked(Photo photo) {
+
+                Intent intent = new Intent(getActivity(), PhotoDetailActivity.class);
+                intent.putExtra(Constants.BUNDLE_PHOTO, photo);
+                startActivity(intent);
             }
         });
 

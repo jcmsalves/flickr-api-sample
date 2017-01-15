@@ -127,7 +127,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.PhotoVie
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    onPhotoClickedListener.onPhotoClicked(getAdapterPosition());
+                    onPhotoClickedListener.onPhotoClicked(photos.get(getAdapterPosition()));
                 }
             });
 
@@ -135,7 +135,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.PhotoVie
     }
 
     public interface OnPhotoClickedListener {
-        void onPhotoClicked(int position);
+        void onPhotoClicked(Photo photo);
     }
 
 }

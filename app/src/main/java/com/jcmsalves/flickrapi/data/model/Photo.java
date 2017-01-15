@@ -3,11 +3,13 @@ package com.jcmsalves.flickrapi.data.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 /**
  * Created by joaoalves on 14/01/2017.
  */
 
-public class Photo extends GalleryItem {
+public class Photo extends GalleryItem implements Serializable {
 
     @SerializedName("title")
     @Expose
@@ -77,7 +79,7 @@ public class Photo extends GalleryItem {
         return tags;
     }
 
-    public class Media {
+    public class Media implements Serializable {
 
         @SerializedName("m")
         @Expose
